@@ -6,7 +6,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CA2</title>
 
-  <script type="module" crossorigin src="./assets/index-DrHW67bi.js"></script>
+    <style>
+        * {
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        #avg-clicks-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        #avg-clicks-btn {
+            padding: 10px 30px;
+            font-size: 18px;
+            background-color: #2c3f9eff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        #avg-clicks-btn:hover {
+            background-color: #2c3f9eff;
+        }
+
+        #avg-clicks-display {
+            margin-top: 10px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+
+  <script type="module" crossorigin src="./assets/index-niv8OO9n.js"></script>
 </head>
 
 <body>
@@ -53,11 +96,11 @@
     </template>
 
     <h1>Card Memory Game</h1>
-    <div>
-        <button id="avg-clicks-btn">Show Average Clicks</button>
-        <p id="avg-clicks-display" style="display: none;"></p>
+    <div id="avg-clicks-container">
+        <button id="avg-clicks-btn" aria-label="Show average clicks from all games">Show Average Clicks</button>
+        <p id="avg-clicks-display" style="display: none;" role="status" aria-live="polite"></p>
     </div>
-    <game-board size="4x4"></game-board>
+    <game-board size="2x2" role="region" aria-label="Memory card game board"></game-board>
 </body>
 
 </html>
